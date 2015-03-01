@@ -1,0 +1,20 @@
+.landing-slide {
+  background: $brand-orange;
+}
+
+.landing-ball {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+  height: 300px;
+  width: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-radius: 50%;
+  background-color: $brand-blood-orange;
+}
+
+.landing-logo {
+  max-width: 180px;
+  padding: 100px 0;
+}

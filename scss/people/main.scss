@@ -1,0 +1,60 @@
+.people-slide {
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
+
+  background-color: $bg-white;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .5)), color-stop(.55, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(.75, rgba(255, 255, 255, .5)), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
+}
+
+.people-title {
+  margin: 0;
+  position: absolute;
+    top: -40px;
+    right: 0;
+    left: 10px;
+}
+
+.people-title svg {
+  -webkit-transform: rotate(55deg);
+  -moz-transform: rotate(55deg);
+  -ms-transform: rotate(55deg);
+  -o-transform: rotate(55deg);
+  transform: rotate(55deg);
+}
+
+.people-title text {
+  font-family: 'Helvetica Neue', Arial;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.people__list {
+  padding: 0;
+  list-style: none;
+  margin: -150px 0 0;
+  position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.people__item {
+  position: relative;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  width: 25%;
+  padding: 0 15px;
+}
+
+.people__pic {
+  border-radius: 50%;
+  max-width: 100%;
+}

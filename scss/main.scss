@@ -1,3 +1,6 @@
+// Variables
+@import './variables';
+
 // Scaffold
 @import './base/normalize';
 @import './base/main';
@@ -5,4 +8,7 @@
 @import './global/layout';
 
 // Modules
-@import './services/items';
+@import './nav/main';
+@import './landing/main';
+@import './services/main';
+@import './people/main';
