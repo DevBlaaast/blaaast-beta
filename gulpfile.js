@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     jshint = require('gulp-jshint'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    concat = require('gulp-concat');
     // uncss = require('gulp-uncss'),
     // zopfli = require("gulp-zopfli"),
     // connect = require('gulp-connect'),
@@ -20,9 +21,10 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     return gulp.src('./js/**/*.js')
+        .pipe( concat('all.js') )
         .pipe( jshint() )
         .pipe( jshint.reporter('default') )
-        .pipe( gulp.dest('./build/js') )
+        .pipe( gulp.dest('./build/js/') );
         // .pipe( connect.reload() )
         // .pipe( notify('JS task complete!') )
 });

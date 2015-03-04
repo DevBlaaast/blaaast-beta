@@ -1,6 +1,12 @@
-.page_container {
-  position: relative;
-  max-width: 1020px;
+html, body {
   height: 100%;
-  margin: 0 auto;
+}
+
+article > section {
+  min-height: 100%;
+  position: relative;
+}
+
+article {
+  height: 100%;
 }

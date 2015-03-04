@@ -19,146 +19,167 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="wrapper">
-      <nav class="nav-main">
-        <div class="page_container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <p class="nav-logo">Blaaast</p>
-          <ul class="nav-list">
-            <li class="nav-item">Home</li>
-            <li class="nav-item">Tech &amp; Design</li>
-            <li class="nav-item">New Marketing</li>
-            <li class="nav-item">Training</li>
-            <li class="nav-item">Open Source</li>
-            <li class="nav-item">Twitter</li>
+        </div>
+
+        <div id="navbar" class="navbar-right collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Tech &amp; Design</a></li>
+            <li><a href="#contact">New Marketing</a></li>
+            <li><a href="#contact">Training</a></li>
+            <li><a href="#contact">Open Source</a></li>
+            <li><a href="#contact" class="nav-twitter">Twitter</a></li>
           </ul>
         </div>
-      </nav>
-
-      <div class="main">
-
-        <section class="page1 landing-slide">
-          <div class="page_container">
-
-            <div class="landing-ball">
-              <img src="img/logoblaaast.png" class="landing-logo">
-            </div>
-
-          </div>
-        </section>
-
-        <section class="page2 services-slide">
-          <div class="page_container">
-
-            <div class="services-container">
-              <h1 class="services__title">What we do</h1>
-              <ul class="services clearfix">
-
-                <li class="services__item">
-                  <img src="img/picto-services/run.png" class="services__item__img">
-                  <h2 class="services__item__title">We train</h2>
-                  <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum.</p>
-                </li>
-
-                <li class="services__item">
-                  <img src="img/picto-services/device.png" class="services__item__img">
-                  <h2 class="services__item__title">We design</h2>
-                  <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum amet.</p>
-                </li>
-
-                <li class="services__item">
-                  <img src="img/picto-services/socials.png" class="services__item__img">
-                  <h2 class="services__item__title">We communicate</h2>
-                  <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet.</p>
-                </li>
-
-                <li class="services__item">
-                  <img src="img/picto-services/heart.png" class="services__item__img">
-                  <h2 class="services__item__title">Positive impact</h2>
-                  <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum dolore sit.</p>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-
-        </section>
-
-        <section class="page3 people-slide">
-          <div class="page_container">
-            <ul class="people__list">
-              <li class="people__item">
-                <h1 class="people-title">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 300 300" xml:space="preserve">
-                    <defs>
-                      <path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-                    </defs>
-                    <g>
-                      <use xlink:href="#circlePath" fill="none"/>
-                      <text fill="#9d9d9c">
-                        <textPath xlink:href="#circlePath">Who we are ?</textPath>
-                      </text>
-                    </g>
-                  </svg>
-                </h1>
-                <img src="img/team/sofian.jpg" class="people__pic">
-                <h2>Sofian Meguellati</h2>
-                <p>Co-founder &amp; CEO</p>
-              </li><!--
-              --><li class="people__item">
-                <img src="img/team/tom.jpg" class="people__pic">
-                <h2>Tom Coquereau</h2>
-                <p>Co-founder &amp; CTO</p>
-              </li><!--
-              --><li class="people__item">
-                <img src="img/team/gabriel.jpg" class="people__pic">
-                <h2>Gab</h2>
-                <p>Designer UI</p>
-              </li><!--
-              --><li class="people__item">
-                <img src="img/team/christophe.jpg" class="people__pic">
-                <h2>Chris</h2>
-                <p>Designer UX</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="page4">
-          <div class="page_container">
-            <h1>Take the tour OR Last projects</h1>
-          </div>
-        </section>
-
-        <section class="page5">
-          <div class="page_container">
-            <h1>References</h1>
-            <ul>
-              <li>
-                <img src="img/clients/ticketforchange.png" class="clients-logo">
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="page5">
-          <div class="page_container">
-            <h1>Contact</h1>
-            <ul>
-              <li>sofian@blaaast.co</li>
-              <li>(+33) 6.25.32.06.78</li>
-              <li>tweet @blaaast_co</li>
-            </ul>
-          </div>
-        </section>
 
       </div>
-    </div>
+    </nav>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="build/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/vendor/onepage-scroll-1.3.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <article>
+
+      <section class="landing-slide">
+        <div class="container">
+
+          <div class="landing-ball">
+            <img src="img/logoblaaast.png" class="landing-logo">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="services-slide">
+        <div class="container">
+
+          <div class="services-container">
+            <h1 class="services__title">What we do</h1>
+            <ul class="services clearfix">
+
+              <li class="services__item">
+                <img src="img/picto-services/run.png" class="services__item__img">
+                <h2 class="services__item__title">Training</h2>
+                <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum.</p>
+              </li>
+
+              <li class="services__item">
+                <img src="img/picto-services/device.png" class="services__item__img">
+                <h2 class="services__item__title">Tech &amp; Design</h2>
+                <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum amet.</p>
+              </li>
+
+              <li class="services__item">
+                <img src="img/picto-services/socials.png" class="services__item__img">
+                <h2 class="services__item__title">New Marketing</h2>
+                <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet.</p>
+              </li>
+
+              <li class="services__item">
+                <img src="img/picto-services/heart.png" class="services__item__img">
+                <h2 class="services__item__title">Open Source</h2>
+                <p class="services__item__body">Lorem ipsum dolore sit amet lorem ipsum dolore sit amet lorem ipsum dolore sit.</p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="people-slide">
+        <div class="container">
+          <h1>Who we are ?</h1>
+          <!-- <h1 class="people-title">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 300 300" xml:space="preserve">
+              <defs>
+                <path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+              </defs>
+              <g>
+                <use xlink:href="#circlePath" fill="none"/>
+                <text fill="#9d9d9c">
+                  <textPath xlink:href="#circlePath">Who we are ?</textPath>
+                </text>
+              </g>
+            </svg>
+          </h1> -->
+
+          <div class="people__list row">
+
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="people__item col-xs-6">
+                  <img src="img/team/sofian.jpg" class="people__pic">
+                  <h2 class="people__item__name">Sofian Meguellati</h2>
+                  <p class="people__item__body">Co-founder &amp; CEO</p>
+                </div>
+
+                <div class="people__item col-xs-6">
+                  <img src="img/team/tom.jpg" class="people__pic">
+                  <h2 class="people__item__name">Tom Coquereau</h2>
+                  <p>Co-founder &amp; CTO</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="people__item col-xs-6">
+                  <img src="img/team/gabriel.jpg" class="people__pic">
+                  <h2 class="people__item__name">Gab</h2>
+                  <p>Designer UI</p>
+                </div>
+
+                <div class="people__item col-xs-6">
+                  <img src="img/team/christophe.jpg" class="people__pic">
+                  <h2 class="people__item__name">Chris</h2>
+                  <p>Designer UX</p>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects-slide">
+        <div class="container">
+          <h1>Take the tour OR Last projects</h1>
+        </div>
+      </section>
+
+      <section class="clients-slide">
+        <div class="container">
+          <h1>References</h1>
+          <ul>
+            <li>
+              <img src="img/clients/ticketforchange.png" class="clients-logo">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact-slide">
+        <div class="container">
+          <h1>Contact</h1>
+          <ul>
+            <li>sofian@blaaast.co</li>
+            <li>(+33) 6.25.32.06.78</li>
+            <li>tweet @blaaast_co</li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+
+    <script src="build/js/all.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

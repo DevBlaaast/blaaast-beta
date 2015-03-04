@@ -1,33 +1,28 @@
-.nav-main {
-  z-index: 2;
-  position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  background-color: $bg-dark-purple;
-}
-
 .nav-logo {
   margin: 0;
   padding: 0 3px;
   float: left;
   text-indent: -9999px;
   width: 70px;
-  height: 50px;
+  height: 60px;
   background: url(../../img/logoheader.png) 50% 50% no-repeat;
 }
 
-.nav-list {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  float: right;
+.navbar-nav {
+  text-transform: uppercase;
+
+  > li {
+    font-family: $headings-font-family;
+  }
+  > li > a {
+    color: $bg-grey;
+    font-size: 26px;
+    padding: 20px;
+  }
 }
 
-.nav-item {
-  display: inline-block;
-  color: $bg-grey;
-  padding: 15px 5px;
-  text-transform: uppercase;
+.nav-twitter {
+  text-indent: -9999px;
+  background: url(../../img/twitter.png) 50% 50% no-repeat;
+  background-size: 40px auto;
 }

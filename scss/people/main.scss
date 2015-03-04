@@ -29,7 +29,7 @@
 }
 
 .people-title text {
-  font-family: 'Helvetica Neue', Arial;
+  font-family: $headings-font-family;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -45,13 +45,12 @@
     right: 0;
 }
 
-.people__item {
-  position: relative;
-  box-sizing: border-box;
-  vertical-align: top;
-  display: inline-block;
-  width: 25%;
-  padding: 0 15px;
+.people__item__name {
+  text-align: center;
+}
+
+.people__item__body {
+
 }
 
 .people__pic {
