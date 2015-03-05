@@ -36,21 +36,17 @@
 }
 
 .people__list {
-  padding: 0;
+  padding: 80px 0;
   list-style: none;
-  margin: -150px 0 0;
-  position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
 }
 
-.people__item__name {
-  text-align: center;
+.people__item {
+  padding-bottom: 20px;
 }
 
+.people__item__name,
 .people__item__body {
-
+  text-align: center;
 }
 
 .people__pic {

@@ -1,4 +1,11 @@
+.clients-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .clients-logo {
+  max-width: 100%;
   transition: .2s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

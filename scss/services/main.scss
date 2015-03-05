@@ -1,6 +1,7 @@
 .services-slide {
   background-color: $bg-purple;
   overflow: hidden;
+  height: 750px;
 }
 
 .services-container {
@@ -29,9 +30,10 @@
 .services__title {
   text-transform: uppercase;
   margin-bottom: 0;
-  margin-top: -44px;
+  margin-top: -55px;
   text-align: left;
   color: $bg-dark-purple;
+  font-size: 50px;
 }
 
 .services__item {

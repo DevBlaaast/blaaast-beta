@@ -4898,7 +4898,6 @@ html, body {
   height: 100%; }
 
 article > section {
-  min-height: 100%;
   position: relative; }
 
 article {
@@ -4906,12 +4905,16 @@ article {
 
 .nav-logo {
   margin: 0;
-  padding: 0 3px;
+  padding: 0 3px 0 15px;
   float: left;
   text-indent: -9999px;
-  width: 70px;
+  width: 85px;
   height: 60px;
-  background: url(../../img/logoheader.png) 50% 50% no-repeat; }
+  background: url(../../img/logoheader.png) 15px 50% no-repeat; }
+
+.navbar-toggle {
+  margin-top: 13px;
+  margin-bottom: 13px; }
 
 .navbar-nav {
   text-transform: uppercase; }
@@ -4928,7 +4931,8 @@ article {
   background-size: 40px auto; }
 
 .landing-slide {
-  background: #db4c22; }
+  background: #db4c22;
+  height: 100%; }
 
 .landing-ball {
   text-align: center;
@@ -4961,7 +4965,8 @@ article {
 
 .services-slide {
   background-color: #39303a;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 750px; }
 
 .services-container {
   background-color: #252026;
@@ -4987,9 +4992,10 @@ article {
 .services__title {
   text-transform: uppercase;
   margin-bottom: 0;
-  margin-top: -44px;
+  margin-top: -55px;
   text-align: left;
-  color: #252026; }
+  color: #252026;
+  font-size: 50px; }
 
 .services__item {
   text-align: center;
@@ -5044,22 +5050,26 @@ article {
   text-transform: uppercase; }
 
 .people__list {
-  padding: 0;
-  list-style: none;
-  margin: -150px 0 0;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0; }
+  padding: 80px 0;
+  list-style: none; }
 
-.people__item__name {
+.people__item {
+  padding-bottom: 20px; }
+
+.people__item__name, .people__item__body {
   text-align: center; }
 
 .people__pic {
   border-radius: 50%;
   max-width: 100%; }
 
+.clients-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .clients-logo {
+  max-width: 100%;
   transition: .2s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

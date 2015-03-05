@@ -1,11 +1,16 @@
 .nav-logo {
   margin: 0;
-  padding: 0 3px;
+  padding: 0 3px 0 15px;
   float: left;
   text-indent: -9999px;
-  width: 70px;
+  width: 85px;
   height: 60px;
-  background: url(../../img/logoheader.png) 50% 50% no-repeat;
+  background: url(../../img/logoheader.png) 15px 50% no-repeat;
+}
+
+.navbar-toggle {
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
 .navbar-nav {
