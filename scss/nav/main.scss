@@ -1,3 +1,7 @@
+.navbar-inverse {
+  background: $bg-dark-purple;
+}
+
 .nav-logo {
   margin: 0;
   padding: 0 3px 0 15px;
@@ -19,7 +23,7 @@
   > li {
     font-family: $headings-font-family;
   }
-  > li > a {
+  .navbar-inverse & > li > a {
     color: $bg-grey;
     font-size: 26px;
     padding: 20px;

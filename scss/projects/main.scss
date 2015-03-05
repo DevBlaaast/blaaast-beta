@@ -1,0 +1,28 @@
+.projects-slide {
+  .row {
+    margin: 0;
+  }
+}
+
+.projects-title__container {
+  background: $bg-dark-purple;
+}
+
+.projects-title {
+  margin: 0;
+  padding: 10px;
+  color: $bg-grey;
+}
+
+.projects-footer {
+  background: $bg-dark-purple;
+  height: 50px;
+}
+
+.projects-item {
+  padding: 0;
+}
+
+.projects-item__img {
+  max-width: 100%;
+}

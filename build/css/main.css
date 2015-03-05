@@ -4903,6 +4903,12 @@ article > section {
 article {
   height: 100%; }
 
+h1, .h1 {
+  text-transform: uppercase; }
+
+.navbar-inverse {
+  background: #252026; }
+
 .nav-logo {
   margin: 0;
   padding: 0 3px 0 15px;
@@ -4920,7 +4926,7 @@ article {
   text-transform: uppercase; }
   .navbar-nav > li {
     font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .navbar-nav > li > a {
+  .navbar-inverse .navbar-nav > li > a {
     color: #958799;
     font-size: 26px;
     padding: 20px; }
@@ -5066,7 +5072,7 @@ article {
 .clients-list {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0 0 90px; }
 
 .clients-logo {
   max-width: 100%;
@@ -5078,3 +5084,39 @@ article {
   .clients-logo:hover {
     filter: none;
     -webkit-filter: grayscale(0%); }
+
+.projects-slide .row {
+  margin: 0; }
+
+.projects-title__container {
+  background: #252026; }
+
+.projects-title {
+  margin: 0;
+  padding: 10px;
+  color: #958799; }
+
+.projects-footer {
+  background: #252026;
+  height: 50px; }
+
+.projects-item {
+  padding: 0; }
+
+.projects-item__img {
+  max-width: 100%; }
+
+.contact-slide {
+  background: #db4c22; }
+
+.contact-title {
+  color: #a0310e; }
+
+.footer-slide {
+  background: #a0310e;
+  padding: 40px 0; }
+
+.footer-logo {
+  text-align: center; }
+  .footer-logo img {
+    max-width: 210px; }

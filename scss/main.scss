@@ -5,6 +5,7 @@
 @import './font';
 @import './base/_bootstrap';
 @import './global/layout';
+@import './base/typography';
 
 // Modules
 @import './nav/main';
@@ -12,3 +13,6 @@
 @import './services/main';
 @import './people/main';
 @import './clients/main';
+@import './projects/main';
+@import './contact/main';
+@import './footer/main';
