@@ -13,9 +13,10 @@
 .services__title {
   text-transform: uppercase;
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
   color: $bg-dark-purple;
   font-size: 50px;
+  margin: 40px 0 0;
 }
 
 .services__item {
@@ -55,10 +56,12 @@
     min-height: 750px;
   }
   .services {
-    width: 400px;
-    height: 400px;
+    width: 440px;
+    height: 440px;
+    margin: 35px auto 35px;
   }
   .services__title {
+    text-align: left;
     margin-top: -55px;
   }
   .services__item {

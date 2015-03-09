@@ -8,6 +8,7 @@
   position: absolute;
     top: 50%;
     left: 50%;
+  line-height: 300px;
   height: 300px;
   width: 300px;
   margin-top: -150px;
@@ -15,20 +16,20 @@
   border-radius: 50%;
   background-color: $brand-blood-orange;
 
-  &::before {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-right: -20px;
-    z-index: 2;
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 30px solid $brand-orange;
-    transform: translateX(-50%);
-  }
+  // &::before {
+  //   position: absolute;
+  //   bottom: 20px;
+  //   left: 50%;
+  //   margin-right: -20px;
+  //   z-index: 2;
+  //   content: '';
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 20px solid transparent;
+  //   border-right: 20px solid transparent;
+  //   border-top: 30px solid $brand-orange;
+  //   transform: translateX(-50%);
+  // }
 }
 
 .landing-logo {
