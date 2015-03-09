@@ -49,6 +49,16 @@
   text-align: center;
 }
 
+.people__item__body {
+  font-size: 26px;
+  font-family: $headings-font-family;
+}
+
+.people__item__name {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
 .people__item__boss {
   color: $brand-orange;
 }

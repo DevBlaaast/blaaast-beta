@@ -6787,6 +6787,14 @@ h1, .h1 {
 .people__item__name, .people__item__body {
   text-align: center; }
 
+.people__item__body {
+  font-size: 26px;
+  font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.people__item__name {
+  text-transform: uppercase;
+  margin-bottom: 5px; }
+
 .people__item__boss {
   color: #db4c22; }
 
