@@ -1,36 +1,18 @@
 .services-slide {
   background-color: $bg-purple;
   overflow: hidden;
-  height: 750px;
-}
-
-.services-container {
-  background-color: $bg-dark-purple;
-  position: absolute;
-    top: 50%;
-    left: 50%;
-  margin-left: -300px;
-  margin-top: -300px;
-  width: 600px;
-  height: 600px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }
 
 .services {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 500px;
-  height: 500px;
-  margin: 50px auto 0;
+  margin: 50px auto 50px;
 }
 
 .services__title {
   text-transform: uppercase;
   margin-bottom: 0;
-  margin-top: -55px;
   text-align: left;
   color: $bg-dark-purple;
   font-size: 50px;
@@ -38,13 +20,10 @@
 
 .services__item {
   text-align: center;
-  width: 50%;
+  max-width: 320px;
+  margin: 0 auto;
   height: 50%;
-  float: left;
   color: $bg-grey;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .services__item__img {
@@ -58,4 +37,66 @@
 
 .services__item__body {
   margin-top: 0;
+}
+
+// Custom breakpoint
+@media (min-width: 450px) {
+  .services__item {
+    float: left;
+    padding: 8px;
+    max-width: 100%;
+    width: 50%;
+  }
+}
+
+// For sm screens
+@media (min-width: $screen-sm-min) {
+  .services-slide {
+    min-height: 750px;
+  }
+  .services {
+    width: 400px;
+    height: 400px;
+  }
+  .services__title {
+    margin-top: -55px;
+  }
+  .services__item {
+    color: $bg-grey;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .services-container {
+    background-color: $bg-dark-purple;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    width: 500px;
+    height: 500px;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+// For md screens
+@media (min-width: $screen-md-min) {
+  .services-container {
+    margin-left: -300px;
+    margin-top: -300px;
+    width: 600px;
+    height: 600px;
+  }
+  .services {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+// For lg screens
+@media (min-width: $screen-lg-min) {
+
 }

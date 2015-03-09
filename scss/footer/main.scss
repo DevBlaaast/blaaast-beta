@@ -5,8 +5,23 @@
 
 .footer-logo {
   text-align: center;
+  padding-bottom: 30px;
 
   img {
     max-width: 210px;
+  }
+}
+
+.footer-text {
+  text-align: center;
+  color: $brand-orange;
+  font-weight: bold;
+}
+
+.footer-legal {
+  color: $bg-white;
+
+  &:hover {
+    color: $bg-stripe-white;
   }
 }
