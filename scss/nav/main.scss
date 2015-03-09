@@ -28,10 +28,7 @@
     font-size: 26px;
     padding: 20px;
   }
-}
-
-.nav-twitter {
-  text-indent: -9999px;
-  background: url(../../img/twitter.png) 50% 50% no-repeat;
-  background-size: 40px auto;
+  .navbar-inverse & > li > .navbar-twitter {
+    padding: 15px;
+  }
 }
