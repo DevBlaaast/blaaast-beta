@@ -12,6 +12,13 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="build/css/main.css">
+
+    <!--[if lte IE 9]>
+      <script rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -321,10 +328,11 @@
             </p>
             <p class="footer-text">
               BLAAAST &copy; 2015. Tous droits réservés.
-              <a href="" class="hidden-xs footer-legal" data-toggle="modal" data-target="#modal-copyright">Mentions Légales</a>
+              <a href="" id="modal-copyright-btn" class="hidden-xs footer-legal" data-toggle="modal" data-target="#modal-copyright">Mentions Légales</a>
             </p>
 
             <div class="modal fade text-center" id="modal-copyright" tabindex="-1" role="dialog" aria-labelledby="m-copyright" aria-hidden="true">
+              <div class="modal-backdrop fade" style="height: 100%;display:none;"></div>
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -404,9 +412,9 @@
 
                     <button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
                   </div>
-                </div><!-- /.modal-content -->
+                </div><!-- /.modal-content
               </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
+            </div><!-- /.modal --> -->
 
           </div>
         </div>

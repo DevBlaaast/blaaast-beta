@@ -1,3 +1,21 @@
+// Polyfills:
+// - classList
+
+(function (w) {
+  var modalButton = document.getElementById('modal-copyright-btn');
+  var modal = document.getElementById('modal-copyright');
+
+  modalButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (modal.classList.contains('in')) {
+      modal.classList.remove('in');
+      modal.style.display = 'none';
+    } else {
+      modal.classList.add('in');
+      modal.style.display = 'block';
+    }
+  });
+})(window);
 
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
 "document"in self&&!("classList"in document.createElement("_"))&&function(e){"use strict";if("Element"in e){var t="classList",n="prototype",r=e.Element[n],a=Object,i=String[n].trim||function(){return this.replace(/^\s+|\s+$/g,"")},s=Array[n].indexOf||function(e){for(var t=0,n=this.length;n>t;t++)if(t in this&&this[t]===e)return t;return-1},l=function(e,t){this.name=e,this.code=DOMException[e],this.message=t},o=function(e,t){if(""===t)throw new l("SYNTAX_ERR","An invalid or illegal string was specified");if(/\s/.test(t))throw new l("INVALID_CHARACTER_ERR","String contains an invalid character");return s.call(e,t)},c=function(e){for(var t=i.call(e.getAttribute("class")||""),n=t?t.split(/\s+/):[],r=0,a=n.length;a>r;r++)this.push(n[r]);this._updateClassName=function(){e.setAttribute("class",""+this)}},u=c[n]=[],d=function(){return new c(this)};if(l[n]=Error[n],u.item=function(e){return this[e]||null},u.contains=function(e){return e+="",-1!==o(this,e)},u.add=function(){var e,t=arguments,n=0,r=t.length,a=!1;do e=t[n]+"",-1===o(this,e)&&(this.push(e),a=!0);while(r>++n);a&&this._updateClassName()},u.remove=function(){var e,t=arguments,n=0,r=t.length,a=!1;do{e=t[n]+"";var i=o(this,e);-1!==i&&(this.splice(i,1),a=!0)}while(r>++n);a&&this._updateClassName()},u.toggle=function(e,t){e+="";var n=this.contains(e),r=n?t!==!0&&"remove":t!==!1&&"add";return r&&this[r](e),!n},u.toString=function(){return this.join(" ")},a.defineProperty){var g={get:d,enumerable:!0,configurable:!0};try{a.defineProperty(r,t,g)}catch(h){-2146823252===h.number&&(g.enumerable=!1,a.defineProperty(r,t,g))}}else a[n].__defineGetter__&&r.__defineGetter__(t,d)}}(self),/*!
