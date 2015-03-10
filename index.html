@@ -22,6 +22,7 @@
 
     <!--[if lte IE 9]>
       <script rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.0/es5-shim.min.js"></script>
     <![endif]-->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
@@ -338,22 +339,18 @@
               <a href="" id="modal-copyright-btn" class="hidden-xs footer-legal" data-toggle="modal" data-target="#modal-copyright">Mentions Légales</a>
             </p>
 
-            <div class="modal fade text-center" id="modal-copyright" tabindex="-1" role="dialog" aria-labelledby="m-copyright" aria-hidden="true">
-              <div class="modal-backdrop fade" style="height: 100%;display:none;"></div>
+            <div id="modal-copyright" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;">
+              <div class="modal-backdrop fade"></div>
               <div class="modal-dialog">
                 <div class="modal-content">
+
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="m-copyright"></h4>
+                    <button type="button" class="close js-modal-legal-close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2 class="modal-title" id="m-copyright">MENTIONS LEGALES</h2>
                   </div>
                   <div class="modal-body font-color-black">
 
-                  <h3>MENTIONS LEGALES</h3>
-                    <hr class="lar">
-
-                  <h3>Editeur</h3>
-                    <hr class="min-inv">
-
+                    <h3>Editeur</h3>
                     <p class="legal">Blaaast - Marque déposée
                     SIRET 809683337
                     APE 7022 Z
@@ -365,63 +362,58 @@
                     <hr class="min-inv">
 
                     <h3>Réalisation</h3>
-                    <hr class="min-inv">
                     <p class="legal">Design réalisé par l’agence Black Beans SAS, dont le siège social est situé au 1, rue de Normandie, 75003 Paris.</p>
-
                     <hr class="min-inv">
 
                     <h3>Directeur de la publication</h3>
-                    <hr class="min-inv">
                     <p class="legal">Sofian Meguellati</p>
-
                     <hr class="min-inv">
 
                     <h3>Contenu du site</h3>
-                    <hr class="min-inv">
                     <p class="legal">Le site www.blaaast.co est la propriété de Blaaast.
                     Blaaast se réserve le droit de modifier à tout moment, sans préavis, le contenu du site.</p>
-
                     <hr class="min-inv">
 
                     <h3>Droits d'auteur et reproduction</h3>
-                    <hr class="min-inv">
                     <p class="legal">La structure générale ainsi que les logiciels, textes, bases de données, images animées ou non, savoir-faire et tous les autres éléments composant le site sont la propriété exclusive de Blaaast.
                     Toute représentation totale ou partielle de ce site par quelle que personne que ce soit, sans l'autorisation expresse de Blaaast est interdite et constituerait une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle.
                     Tout contrevenant s’exposerait à une peine de 3 ans d’emprisonnement et 300.000€ d’amende.
                     Les logos, visuels et marques présents sur ce site sont la propriété de leur détenteur respectif.</p>
-
                     <hr class="min-inv">
 
                     <h3>Informatique et libertés</h3>
-                    <hr class="min-inv">
                     <p class="legal">Conformément à l'article 34 de la Loi n°78-17 Informatique et Liberté du 06/01/1978 , vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concernent.
                     Pour exercer ce droit d'accès, adressez-vous par écrit à Blaaast.
                     Les informations recueillies par le biais des formulaires ne seront pas divulguées à des personnes tiers.</p>
-
                     <hr class="min-inv">
 
                     <h3>Liens hypertexte</h3>
-                    <hr class="min-inv">
                     <p class="legal">Toute création de lien hypertexte pointant vers le site www.blaaast.co est libre.
                     L'existence d'un lien hypertexte du site www.blaaast.co vers un autre site ne constitue pas une validation de ce site ou de son contenu, Blaaast ne peut exercer de contrôle sur le contenu de ces sites et sa responsabilité ne saurait être engagée quant aux informations, opinions et recommandations formulées sur ces sites tiers.</p>
-
                     <hr class="min-inv">
 
                     <h3>Loi applicable</h3>
-                    <hr class="min-inv">
                     <p class="legal">Les présentes mentions légales sont régies par le droit français. Les juridictions françaises seront compétentes en cas de litige afférent à l’utilisation du site. © Blaaast 2014 – tous droits réservés.</p>
-
                     <hr class="min-inv">
 
-                    <hr class="lar">
                     <p><strong>Email </strong><a href="mailto:sofian@blaaast.co">sofian@blaaast.co</a><br>
                     <strong>Website </strong><a href="http://www.blaaast.co" target="_blank">www.blaaast.co</a></p><br>
 
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+                    <button type="button" class="btn btn-default js-modal-legal-close" data-dismiss="modal">Retour</button>
                   </div>
-                </div><!-- /.modal-content
+
+                </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
-            </div><!-- /.modal --> -->
+            </div>
+
+            <!-- <div class="modal fade text-center" id="modal-copyright" tabindex="-1" role="dialog" aria-labelledby="m-copyright" aria-hidden="true">
+              <div class="modal-backdrop fade" style="height: 100%;display:none;"></div>
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+              </div>
+            </div> -->
 
           </div>
         </div>
