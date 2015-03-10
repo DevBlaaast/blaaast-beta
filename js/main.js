@@ -39,6 +39,9 @@
   // Toggle modal from footer button
   modalButton.addEventListener('click', toggleLegalModal, false);
 
+  // Toggle the modal on click on the backdrop
+  modalBackdrop.addEventListener('click', toggleLegalModal, false);
+
   // Toggle modal from modal's close buttons
   [].forEach.call(modalClose, function (el) {
     el.addEventListener('click', toggleLegalModal, false);
