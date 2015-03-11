@@ -69,13 +69,28 @@ gulp.task('uncss', function() {
       html: ['./build/*.html'],
       // To make Bootstrap work
       ignore: [
+        /(#|\.)fancybox(\-[a-zA-Z]+)?/,
+        // Bootstrap selectors added via JS
+        /\w\.in/,
+        '.modal-open',
         '.fade',
-        '.fade.in',
         '.collapse',
-        '.collapse.in',
         '.collapsing',
-        '.alert-danger',
-        /\.open/
+        /(#|\.)navbar(\-[a-zA-Z]+)?/,
+        /(#|\.)dropdown(\-[a-zA-Z]+)?/,
+        /(#|\.)(open)/,
+        // currently only in a IE conditional, so uncss doesn't see it
+        '.close',
+        '.alert-dismissible'
+        // '.modal-backdrop.fade.in',
+        // '.modal-open',
+        // '.fade',
+        // '.fade.in',
+        // '.collapse',
+        // '.collapse.in',
+        // '.collapsing',
+        // '.alert-danger',
+        // /\.open/
       ]
     }) )
     .pipe( gulp.dest('./build/css') )
