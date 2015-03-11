@@ -21,8 +21,20 @@
 }
 
 .clients-item {
-  line-height: 140px;
+  line-height: 90px;
 }
 .clients-item__tall {
   line-height: 270px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .clients-item {
+    line-height: 90px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .clients-item {
+    line-height: 140px;
+  }
 }
