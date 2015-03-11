@@ -10,7 +10,9 @@ var gulp = require('gulp'),
     zopfli = require("gulp-zopfli"),
     connect = require('gulp-connect'),
     minifyhtml = require('gulp-minify-html'),
-    inlinesource = require('gulp-inline-source');
+    inlinesource = require('gulp-inline-source'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 gulp.task('connect', function() {
   connect.server({
@@ -26,6 +28,17 @@ gulp.task('css', function() {
         .pipe( gulp.dest('./build/css') )
         .pipe( connect.reload() )
         .pipe( notify('CSS task complete!') )
+});
+
+
+gulp.task('img', function() {
+    return gulp.src('img/**/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{ removeViewBox: false }],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('img'));
 });
 
 gulp.task('js', function() {
