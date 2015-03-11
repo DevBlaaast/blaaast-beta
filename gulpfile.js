@@ -67,6 +67,7 @@ gulp.task('uncss', function() {
     .pipe( plumber() )
     .pipe( uncss({
       html: ['./build/*.html'],
+      // To make Bootstrap work
       ignore: [
         '.fade',
         '.fade.in',
