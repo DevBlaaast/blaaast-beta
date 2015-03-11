@@ -6629,7 +6629,8 @@ h1, .h1 {
   text-align: center; }
 
 .navbar-fixed-top {
-  z-index: 3; }
+  z-index: 3;
+  -webkit-transform: translateZ(0); }
 
 .navbar-inverse {
   background: #252026; }
