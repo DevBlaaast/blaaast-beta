@@ -65,7 +65,18 @@ gulp.task('html', function() {
 gulp.task('uncss', function() {
   return gulp.src('./build/css/*.css')
     .pipe( plumber() )
-    .pipe( uncss({ html: ['./build/*.html'] }) )
+    .pipe( uncss({
+      html: ['./build/*.html'],
+      ignore: [
+        '.fade',
+        '.fade.in',
+        '.collapse',
+        '.collapse.in',
+        '.collapsing',
+        '.alert-danger',
+        /\.open/
+      ]
+    }) )
     .pipe( gulp.dest('./build/css') )
 });
 
