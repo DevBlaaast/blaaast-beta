@@ -14,10 +14,11 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   uglify = require('gulp-uglify'),
   minifyCSS = require('gulp-minify-css'),
-  pngquant = require('imagemin-pngquant');
+  pngquant = require('imagemin-pngquant'),
+  addsrc = require('gulp-add-src');
 
 gulp.task('connect', function() {
-  connect.server({
+  return connect.server({
     port: 3000,
     livereload: true
   });
@@ -35,6 +36,7 @@ gulp.task('css', function() {
 
 gulp.task('img', function() {
   return gulp.src('img/**/*')
+    .pipe( plumber() )
     .pipe( imagemin({
       progressive: true,
       svgoPlugins: [{ removeViewBox: false }],
@@ -45,7 +47,7 @@ gulp.task('img', function() {
 
 gulp.task('js', function() {
   return gulp.src('./js/**/*.js')
-    .pipe(plumber())
+    .pipe( plumber() )
     .pipe( concat('all.js') )
     .pipe( jshint() )
     .pipe( jshint.reporter('default') )
@@ -56,25 +58,31 @@ gulp.task('js', function() {
 
 gulp.task('html', function() {
   return gulp.src('./*.html')
+    .pipe( plumber() )
     .pipe( connect.reload() )
 });
 
 gulp.task('uncss', function() {
   return gulp.src('./build/css/*.css')
+    .pipe( plumber() )
     .pipe( uncss({ html: ['./build/*.html'] }) )
     .pipe( gulp.dest('./build/css') )
 });
 
 gulp.task('minify-css', function() {
   return gulp.src('./build/css/*.css')
-  .pipe( minifyCSS() )
-  .pipe( gulp.dest('./build/css') )
+    .pipe( plumber() )
+    .pipe( minifyCSS() )
+    .pipe( gulp.dest('./build/css') )
 });
 
 gulp.task('uglify', function() {
-  gulp.src('./build/js/*.js')
-  .pipe( uglify() )
-  .pipe( gulp.dest('./build/js') )
+  return gulp.src('./js/*.js')
+    .pipe( plumber() )
+    .pipe( uglify() )
+    .pipe( addsrc('./js/vendor/*.js') )
+    .pipe( concat('all.js') )
+    .pipe( gulp.dest('./build/js') )
 });
 
 
@@ -84,7 +92,7 @@ gulp.task('default', ['connect', 'watch'], function() {
 });
 
 /* Build static resources */
-gulp.task('build-resources', ['css', 'js']);
+gulp.task('build-resources', ['css']);
 
 /* Compress static resources */
 gulp.task('compress-resources', ['uncss', 'uglify'], function() {
