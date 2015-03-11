@@ -6628,6 +6628,9 @@ h1, .h1 {
   margin: 40px 0 20px;
   text-align: center; }
 
+.navbar-fixed-top {
+  z-index: 3; }
+
 .navbar-inverse {
   background: #252026; }
 
