@@ -57,6 +57,7 @@
 }
 
 .projects-overlay__content {
+  color: $brand-orange;
   position: absolute;
     top: 50%;
   width: 100%;
@@ -67,9 +68,4 @@
       -ms-transform: translateY(-50%) scale(.2);
           transform: translateY(-50%) scale(.2);
   @include transition(all .3s ease-out);
-}
-
-.projects-item__title,
-.projects-skill {
-  color: $brand-orange;
 }

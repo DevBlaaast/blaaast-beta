@@ -1,7 +1,7 @@
 .people-slide {
-  -webkit-background-size: 30px 30px;
-  -moz-background-size: 30px 30px;
-  background-size: 30px 30px;
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
 
   background-color: $bg-white;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .5)), color-stop(.55, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(.75, rgba(255, 255, 255, .5)), color-stop(.75, transparent), to(transparent));
@@ -11,29 +11,6 @@
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);
 }
-
-// .people-title {
-//   margin: 0;
-//   position: absolute;
-//     top: -40px;
-//     right: 0;
-//     left: 10px;
-// }
-
-// .people-title svg {
-//   -webkit-transform: rotate(55deg);
-//   -moz-transform: rotate(55deg);
-//   -ms-transform: rotate(55deg);
-//   -o-transform: rotate(55deg);
-//   transform: rotate(55deg);
-// }
-
-// .people-title text {
-//   font-family: $headings-font-family;
-//   font-size: 30px;
-//   font-weight: bold;
-//   text-transform: uppercase;
-// }
 
 .people__list {
   padding: 30px 0 80px;
