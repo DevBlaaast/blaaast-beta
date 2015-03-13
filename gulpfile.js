@@ -82,6 +82,7 @@ gulp.task('uncss', function() {
         '.collapsing',
         /(#|\.)navbar(\-[a-zA-Z]+)?/,
         /(#|\.)dropdown(\-[a-zA-Z]+)?/,
+        /(#|\.)btn(\-[a-zA-Z]+)?/,
         /(#|\.)(open)/,
         // currently only in a IE conditional, so uncss doesn't see it
         '.close',
