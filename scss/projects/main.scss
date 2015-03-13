@@ -69,3 +69,8 @@
           transform: translateY(-50%) scale(.2);
   @include transition(all .3s ease-out);
 }
+
+.projects-overlay__seemore {
+  // color, bg, border
+  @include button-variant(#fff, $brand-orange, $brand-blood-orange);
+}
