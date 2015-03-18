@@ -15,6 +15,8 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   minifyCSS = require('gulp-minify-css'),
   pngquant = require('imagemin-pngquant'),
+  imageResize = require('gulp-image-resize'),
+  rename = require('gulp-rename'),
   addsrc = require('gulp-add-src');
 
 gulp.task('connect', function() {
@@ -33,16 +35,37 @@ gulp.task('css', function() {
     .pipe( notify('CSS task complete!') )
 });
 
+gulp.task('img', ['img-default', 'img-clients-95', 'img-clients'], function() {
+  // return gulp.src('build/img/**')
+    // .pipe( imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{ removeViewBox: false }],
+    //   use: [pngquant()]
+    // }))
+    // .pipe( gulp.dest('build/img') );
+});
 
-gulp.task('img', function() {
-  return gulp.src('img/**/*')
+// Responsive images
+// 73 95 132 165 224
+gulp.task('img-default', function() {
+  return gulp.src('img/**')
     .pipe( plumber() )
-    .pipe( imagemin({
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngquant()]
-    }))
-    .pipe( gulp.dest('img') );
+    .pipe( gulp.dest('build/img') );
+});
+
+gulp.task('img-clients-95', function() {
+  return gulp.src('img/clients/**')
+    .pipe( plumber() )
+    .pipe( imageResize({ width : 95 }) )
+    .pipe( rename(function (path) { path.basename += "-95"; }) )
+    .pipe( gulp.dest('build/img/clients') );
+});
+
+gulp.task('img-clients', function() {
+  return gulp.src('img/clients/**')
+    .pipe( plumber() )
+    .pipe( imageResize({ width : 224 }) )
+    .pipe( gulp.dest('build/img/clients') );
 });
 
 gulp.task('js', function() {
