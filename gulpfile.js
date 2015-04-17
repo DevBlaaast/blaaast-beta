@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   watch = require('gulp-watch'),
   jshint = require('gulp-jshint'),
-  notify = require('gulp-notify'),
+  // notify = require('gulp-notify'),
   concat = require('gulp-concat'),
   plumber = require('gulp-plumber'),
   uncss = require('gulp-uncss'),
@@ -17,6 +17,7 @@ var gulp = require('gulp'),
   pngquant = require('imagemin-pngquant'),
   imageResize = require('gulp-image-resize'),
   rename = require('gulp-rename'),
+  changed = require('gulp-changed'),
   addsrc = require('gulp-add-src');
 
 gulp.task('connect', function() {
@@ -26,68 +27,20 @@ gulp.task('connect', function() {
   });
 });
 
+// SCSS tasks
 gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
     .pipe( plumber() )
     .pipe( sass() )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
-    .pipe( connect.reload() )
-    .pipe( notify('CSS task complete!') )
-});
-
-gulp.task('img', ['img-default', 'img-clients-95', 'img-clients'], function() {
-  // return gulp.src('build/img/**')
-    // .pipe( imagemin({
-    //   progressive: true,
-    //   svgoPlugins: [{ removeViewBox: false }],
-    //   use: [pngquant()]
-    // }))
-    // .pipe( gulp.dest('build/img') );
-});
-
-// Responsive images
-// 73 95 132 165 224
-gulp.task('img-default', function() {
-  return gulp.src('img/**')
-    .pipe( plumber() )
-    .pipe( gulp.dest('build/img') );
-});
-
-gulp.task('img-clients-95', function() {
-  return gulp.src('img/clients/**')
-    .pipe( plumber() )
-    .pipe( imageResize({ width : 95 }) )
-    .pipe( rename(function (path) { path.basename += "-95"; }) )
-    .pipe( gulp.dest('build/img/clients') );
-});
-
-gulp.task('img-clients', function() {
-  return gulp.src('img/clients/**')
-    .pipe( plumber() )
-    .pipe( imageResize({ width : 224 }) )
-    .pipe( gulp.dest('build/img/clients') );
-});
-
-gulp.task('js', function() {
-  return gulp.src('./js/**/*.js')
-    .pipe( plumber() )
-    .pipe( concat('all.js') )
-    .pipe( jshint() )
-    .pipe( jshint.reporter('default') )
-    .pipe( gulp.dest('./build/js/') )
-    .pipe( connect.reload() )
-    .pipe( notify('JS task complete!') )
-});
-
-gulp.task('html', function() {
-  return gulp.src('./*.html')
     .pipe( plumber() )
     .pipe( connect.reload() )
+    // .pipe( notify('CSS task complete!') )
 });
 
 gulp.task('uncss', function() {
   return gulp.src('./build/css/*.css')
-    .pipe( plumber() )
     .pipe( uncss({
       html: ['./build/*.html'],
       // To make Bootstrap work
@@ -112,23 +65,69 @@ gulp.task('uncss', function() {
         '.alert-dismissible'
       ]
     }) )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
 });
 
 gulp.task('minify-css', function() {
   return gulp.src('./build/css/*.css')
-    .pipe( plumber() )
     .pipe( minifyCSS() )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
+});
+
+gulp.task('img', ['img-default']);
+
+// Responsive images
+gulp.task('img-default', function() {
+  return gulp.src('img/**')
+    .pipe( plumber() )
+    .pipe( gulp.dest('build/img') );
+});
+
+gulp.task('img-clients-95', function() {
+  return gulp.src('img/clients/**')
+    .pipe( plumber() )
+    .pipe( changed('build/img/clients') )
+    .pipe( imageResize({ width : 95 }) )
+    .pipe( rename(function (path) { path.basename += '-95'; }) )
+    .pipe( gulp.dest('build/img/clients') );
+});
+
+gulp.task('img-clients', function() {
+  return gulp.src('img/clients/**')
+    .pipe( plumber() )
+    .pipe( changed('build/img/clients') )
+    .pipe( imageResize({ width : 224 }) )
+    .pipe( gulp.dest('build/img/clients') );
+});
+
+// JS tasks
+gulp.task('js', function() {
+  return gulp.src('./js/**/*.js')
+    .pipe( plumber() )
+    .pipe( concat('all.js') )
+    // .pipe( jshint() )
+    .pipe( jshint.reporter('default') )
+    .pipe( gulp.dest('./build/js/') )
+    .pipe( connect.reload() )
+    // .pipe( notify('JS task complete!') )
 });
 
 gulp.task('uglify', function() {
   return gulp.src('./js/*.js')
-    .pipe( plumber() )
     .pipe( uglify() )
     .pipe( addsrc('./js/vendor/*.js') )
     .pipe( concat('all.js') )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/js') )
+});
+
+// HTML reload on changes
+gulp.task('html', function() {
+  return gulp.src('./*.html')
+    .pipe( plumber() )
+    .pipe( connect.reload() )
 });
 
 

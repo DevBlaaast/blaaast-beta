@@ -1,5 +1,5 @@
 .services-slide {
-  background-color: $bg-purple;
+  background-color: #F7F7F7;
   overflow: hidden;
 }
 
@@ -14,7 +14,7 @@
   text-transform: uppercase;
   margin-bottom: 0;
   text-align: center;
-  color: $bg-dark-purple;
+  color: #000;
   font-size: 50px;
   margin: 40px 0 0;
 }
@@ -28,16 +28,19 @@
 }
 
 .services__item__img {
-  width: 150px;
+  width: 129px;
+  padding-bottom: 20px;
 }
 
 .services__item__title {
+  color: #000;
   margin: 0;
   text-transform: uppercase;
 }
 
 .services__item__body {
   margin-top: 0;
+  color: #7d7d7d;
 }
 
 // Custom breakpoint
@@ -71,7 +74,7 @@
     transform: rotate(45deg);
   }
   .services-container {
-    background-color: $bg-dark-purple;
+    background-color: #fff;
     position: absolute;
       top: 50%;
       left: 50%;
@@ -97,6 +100,20 @@
     width: 500px;
     height: 500px;
     margin: 50px auto;
+  }
+  .services__tech {
+    padding: 40px;
+  }
+  .services__newmarket {
+    padding: 40px;
+    padding-left: 0;
+  }
+  .services__training {
+    padding: 30px;
+  }
+  .services__positive {
+    padding: 20px;
+    padding-right: 0;
   }
 }
 

@@ -4,7 +4,7 @@
 }
 
 .navbar-inverse {
-  background: $bg-dark-purple;
+  background: #000;
 }
 
 .nav-logo {
@@ -13,8 +13,8 @@
   float: left;
   text-indent: -9999px;
   width: 85px;
-  height: 60px;
-  background: url(../../img/logoheader.png) 15px 50% no-repeat;
+  height: 50px;
+  background: url(../../img/monogramme-blaaast.png) 15px 50% no-repeat;
 }
 
 .navbar-toggle {
@@ -31,9 +31,10 @@
   .navbar-inverse & > li > a {
     color: $bg-grey;
     font-size: 26px;
-    padding: 20px;
+    // padding: 20px;
   }
   .navbar-inverse & > li > .navbar-twitter {
-    padding: 15px;
+    padding: 11px;
+    color: #55acee;
   }
 }
