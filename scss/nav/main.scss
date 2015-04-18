@@ -5,8 +5,13 @@
 
 .navbar-inverse {
   background: #000;
+  border: none;
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0 ,0, 0, .15);
           box-shadow: 0px 1px 3px 0px rgba(0 ,0, 0, .15);
+
+  .navbar-toggle {
+    border-color: transparent;
+  }
 }
 
 .nav-logo {
@@ -20,23 +25,83 @@
 }
 
 .navbar-toggle {
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.in {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0 ,0, 0, .15);
+          box-shadow: 0px 1px 3px 0px rgba(0 ,0, 0, .15);
+
+  li {
+
+    &.active {
+      border-color: $brand-primary;
+
+      .navbar & a {
+        color: #fff;
+      }
+
+      &:hover {
+        a {
+          background-color: $brand-primary;
+        }
+      }
+    }
+
+    &.active a,
+    &:hover a,
+    &:focus a,
+    &:active a {
+      background-color: $brand-primary;
+    }
+
+    .navbar & > a {
+      text-align: center;
+      color: #000;
+    }
+  }
 }
 
 .navbar-nav {
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  margin: 0;
 
   > li {
     font-family: $headings-font-family;
+
+    .navbar-right & > a {
+      color: #fff;
+    }
   }
-  .navbar-inverse & > li > a {
-    color: $bg-grey;
-    font-size: 26px;
-    // padding: 20px;
+  .navbar-inverse & > li {
+
+    &.active {
+      border-color: $brand-primary;
+
+      &:hover {
+
+        a {
+          background-color: $brand-primary;
+        }
+      }
+    }
+
+    &.active a,
+    &:hover a,
+    &:focus a,
+    &:active a {
+      background-color: $brand-primary;
+    }
+
+    > a {
+      font-size: 26px;
+    }
   }
-  .navbar-inverse & > li > .navbar-twitter {
-    padding: 11px;
+  .navbar.navbar-inverse & > li > .navbar-twitter {
+    padding: 12px;
     color: #55acee;
   }
 }
