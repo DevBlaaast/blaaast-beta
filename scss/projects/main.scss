@@ -49,10 +49,10 @@
 
   @include transition(all .5s cubic-bezier(0.000, 0.630, 0.190, 0.985));
 
--webkit-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-   -moz-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-     -o-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
-        transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+  -webkit-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+     -moz-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+       -o-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+          transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
 
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
