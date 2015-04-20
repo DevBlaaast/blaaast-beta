@@ -16,8 +16,10 @@
 }
 
 .people__item {
+  margin: 0 auto;
+  max-width: 350px;
   padding-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .people__item__name,
@@ -32,7 +34,7 @@
 
 .people__item__name {
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 
 .people__item__boss {
@@ -40,7 +42,32 @@
 }
 
 .people__pic {
+  float: left;
   border-radius: 50%;
-  width: 140px;
+  width: 87px;
   max-width: 100%;
+  margin-right: 20px;
+}
+
+@media (min-width: 450px) {
+  .people__pic {
+    width: 140px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .people__item {
+    max-width: auto;
+    text-align: center;
+  }
+
+  .people__item__name {
+    margin-top: 20px;
+  }
+
+  .people__pic {
+    float: none;
+    margin-right: 0;
+    width: 140px;
+  }
 }
