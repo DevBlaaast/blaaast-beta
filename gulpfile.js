@@ -82,7 +82,6 @@ gulp.task('css', function() {
     .pipe( sass() )
     .pipe( gulp.dest('./build/css') )
     .pipe( connect.reload() )
-    // .pipe( notify('CSS task complete!') )
 });
 
 gulp.task('uncss', function() {
