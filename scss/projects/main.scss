@@ -12,6 +12,7 @@
   position: relative;
   text-align: center;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .project-item__imagewrap {
@@ -45,17 +46,22 @@
     left: 15px;
   color: $bg-grey;
   background: rgba(227,73,43,0.90);
-  opacity: 0;
-  @include transition(all .2s ease-in-out);
 
-  &:hover {
-    opacity: 1;
+  @include transition(all .5s cubic-bezier(0.000, 0.630, 0.190, 0.985));
 
-    .projects-overlay__content {
-      -webkit-transform: translateY(-50%) scale(1);
-          -ms-transform: translateY(-50%) scale(1);
-              transform: translateY(-50%) scale(1);
-    }
+-webkit-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+   -moz-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+     -o-transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+        transition-timing-function: cubic-bezier(0.000, 0.630, 0.190, 0.985);
+
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+
+  .projects-item:hover & {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -67,10 +73,9 @@
   padding: 30px;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  -webkit-transform: translateY(-50%) scale(.2);
-      -ms-transform: translateY(-50%) scale(.2);
-          transform: translateY(-50%) scale(.2);
-  @include transition(all .3s ease-out);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .projects-overlay__seemore {
