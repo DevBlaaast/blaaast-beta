@@ -106,9 +106,11 @@
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .nav-logo {
-    background-image: url(/build/img/monogramme-blaaast@2x.png);
-    background-size: 44px 26px;
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    .nav-logo {
+      background-image: url(/build/img/monogramme-blaaast@2x.png);
+      background-size: 44px 26px;
+    }
   }
-}
