@@ -3,6 +3,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   height: 100%;
+  position: relative;
 }
 
 .landing-logo {
@@ -13,4 +14,14 @@
     left: 50%;
   margin-top: -55px;
   margin-left: -143px;
+}
+
+.landing-arrow {
+  position: absolute;
+    bottom: 50px;
+    left: 50%;
+  margin-left: -32px;
+  width: 64px;
+  height: 64px;
+  background: transparent url(/build/img/arrow.svg) 0 0 no-repeat;
 }
