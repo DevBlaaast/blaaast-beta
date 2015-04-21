@@ -32,6 +32,12 @@
   color: #bbb;
 }
 
+.people__item__twitter {
+  a {
+    color: $brand-orange;
+  }
+}
+
 .people__item__name {
   text-transform: uppercase;
   margin: 0 0 5px;
